@@ -36,6 +36,7 @@ $string['errorapicredits'] = 'Your AI Tutor API key has run out of credits (HTTP
 $string['errorapihttp'] = 'The AI Tutor API at {$a->host} returned HTTP {$a->code}: {$a->detail}. Request ID: {$a->requestid}';
 $string['errorapijob'] = 'The AI Tutor API could not complete the request: {$a->detail}. Request ID: {$a->requestid}';
 $string['errorapikey'] = 'The AI Tutor API at {$a->host} rejected the API key (HTTP {$a->code}: {$a->detail}). Open Test connection from the Lumination AI provider settings to see which key Moodle is using and compare it with the key in https://ai-tutor.ai/dashboard/api. Also check that the API base URL is https://ai-tutor.ai/api/v1. Request ID: {$a->requestid}';
+$string['errorapitimeout'] = 'The AI Tutor API at {$a->host} did not answer in time. Please try again in a few minutes. If it keeps happening, contact support at hello@ai-tutor.ai with the request ID: {$a->requestid}';
 $string['keyhint'] = '{$a->start}...{$a->end} ({$a->length} characters)';
 $string['noinstance'] = 'No Lumination AI provider is enabled. Create one under Site administration > AI > AI providers, add your API key and enable it.';
 $string['pluginname'] = 'Lumination AI Provider';

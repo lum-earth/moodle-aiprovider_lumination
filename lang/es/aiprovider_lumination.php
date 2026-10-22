@@ -36,6 +36,7 @@ $string['errorapicredits'] = 'Tu clave de la API de AI Tutor se ha quedado sin c
 $string['errorapihttp'] = 'La API de AI Tutor en {$a->host} devolvió HTTP {$a->code}: {$a->detail}. ID de solicitud: {$a->requestid}';
 $string['errorapijob'] = 'La API de AI Tutor no pudo completar la solicitud: {$a->detail}. ID de solicitud: {$a->requestid}';
 $string['errorapikey'] = 'La API de AI Tutor en {$a->host} rechazó la clave de API (HTTP {$a->code}: {$a->detail}). Abre «Probar conexión» desde los ajustes del proveedor Lumination AI para ver qué clave está usando Moodle y compárala con la clave de https://ai-tutor.ai/dashboard/api. Comprueba también que la URL base de la API sea https://ai-tutor.ai/api/v1. ID de solicitud: {$a->requestid}';
+$string['errorapitimeout'] = 'La API de AI Tutor en {$a->host} no respondió a tiempo. Vuelve a intentarlo en unos minutos. Si sigue ocurriendo, escribe a hello@ai-tutor.ai con el ID de solicitud: {$a->requestid}';
 $string['keyhint'] = '{$a->start}...{$a->end} ({$a->length} caracteres)';
 $string['noinstance'] = 'No hay ningún proveedor Lumination AI activado. Crea uno en Administración del sitio > IA > Proveedores de IA, añade tu clave de API y actívalo.';
 $string['pluginname'] = 'Proveedor Lumination AI';

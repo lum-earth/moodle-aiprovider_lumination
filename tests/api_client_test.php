@@ -84,5 +84,6 @@ final class api_client_test extends \advanced_testcase {
         $this->assertSame('errorapihttp', (new api_exception(500, 'x', 'h', 'r'))->errorcode);
         $this->assertSame('errorapijob', (new api_exception(0, 'x', 'h', 'r'))->errorcode);
         $this->assertSame('errorapiconnect', (new api_exception(0, 'x', 'h', 'r', true))->errorcode);
+        $this->assertSame('errorapitimeout', (new api_exception(0, 'x', 'h', 'r', true, true))->errorcode);
     }
 }
