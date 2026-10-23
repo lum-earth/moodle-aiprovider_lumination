@@ -41,6 +41,13 @@ class process_generate_text extends \core_ai\process_base {
         . 'or comments about yourself.';
 
     /**
+     * @var string Goes after the input text: Moodle's instructions are in English, and without this the answer
+     *             came back in English for Spanish text (23 Oct 2026). Sent to the API, so not a lang string.
+     */
+    private const SAME_LANGUAGE = 'Write your whole answer in the language of the input text above, not in the language of '
+        . 'the instructions. For example, Spanish input gets a Spanish answer.';
+
+    /**
      * Send the prompt to the API and wait for the reply.
      *
      * @return array Response fields for Moodle's AI subsystem, or error details.
@@ -73,7 +80,7 @@ class process_generate_text extends \core_ai\process_base {
     }
 
     /**
-     * The message sent to /tutor: Moodle's instruction for this action, then the prompt.
+     * The message sent to /tutor: Moodle's instruction for this action, the input text, then the language rule.
      *
      * @return string The message.
      */
@@ -85,7 +92,8 @@ class process_generate_text extends \core_ai\process_base {
             $parts[] = $instruction;
         }
         $parts[] = self::RESULT_ONLY;
-        $parts[] = $prompt;
+        $parts[] = "Input text:\n" . $prompt;
+        $parts[] = self::SAME_LANGUAGE;
         return implode("\n\n", $parts);
     }
 }

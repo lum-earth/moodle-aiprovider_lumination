@@ -14,6 +14,7 @@ Connects Moodle's AI features to the AI Tutor API by Lumination AI. It is also t
 1. Register at https://ai-tutor.ai and create a key at https://ai-tutor.ai/dashboard/api. Keys start with `sk-tutor-`.
 2. Go to **Site administration > AI > AI providers**, create a **Lumination AI Provider** instance, paste the key and enable it.
 3. Click **Test the API key and base URL** on the instance form.
+4. Switch on the AI placements you want under **Site administration > AI > AI placements** (text editor, course assistance). Moodle installs them switched off, and users accept Moodle's AI usage policy the first time they use them.
 
 New accounts get $20 of free credits. You are only charged for completed requests. Prices are at https://ai-tutor.ai/api/documentation.
 
